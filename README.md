@@ -1,5 +1,5 @@
 # ResCSNet
-Code for ResCSNet (and hopefully for my paper to be published) which compress and restore images using convolutional neural network.
+Code for ResCSNet (and hopefully for my paper to be published) which compresses and restores images using convolutional neural network.
 
 The code is in pytorch. As of coding `pytorch.utils.tensorboard` wasn't available, so I used `tensorboardX`. (But as it turns out there is no big difference between the two)
 
