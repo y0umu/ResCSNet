@@ -3,7 +3,7 @@ Code for ResCSNet (and hopefully for my paper to be published) which compresses 
 
 The code is in pytorch. As of coding `torch.utils.tensorboard` wasn't available, so I used `tensorboardX`. (But as it turns out there is no big difference between the two)
 
-It should run in Google Colabotory. The notebook should be self-explanatory.
+It should run in Google Colaboratory. The notebook should be self-explanatory.
 
 # Reconstruction demo
 | Original                   | Reconstruction at ratio=0.10                         |
