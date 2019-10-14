@@ -5,7 +5,7 @@ The code is in pytorch. As of coding `torch.utils.tensorboard` wasn't available,
 
 It should run in Google Colaboratory. The notebook should be self-explanatory.
 
-**NOTE** During my experiments I notice that certain versions of numpy or pytorch is broken. This will cause the recovered image to have radiculous 'holes'. For example the demo image of parrot in [commit 9b8376fc402160c7b8330b15d9ee75a61822906b](https://github.com/y0umu/ResCSNet/tree/9b8376fc402160c7b8330b15d9ee75a61822906b). More recent versions of numpy (or maybe pytorch) has fixed the bug.
+**NOTE** During my experiments I notice that certain versions of numpy or pytorch is broken. This will cause the recovered image to have ridiculous 'holes'. For example the demo image of parrot in [commit 9b8376fc402160c7b8330b15d9ee75a61822906b](https://github.com/y0umu/ResCSNet/tree/9b8376fc402160c7b8330b15d9ee75a61822906b). More recent versions of numpy (or maybe pytorch) has fixed the bug.
 
 # Reconstruction demo
 The 'ratio' in the table below refers to the compression ratio, i.e. ratio=M/N
