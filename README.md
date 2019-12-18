@@ -24,5 +24,25 @@ The 'ratio' in the table below refers to the compression ratio, i.e. ratio=M/N
 ![parrot](img/parrot.jpg)   | ![parrot_rescsnet_r10](img/parrot_rescsnet_r10.jpg)  | ![parrot_rescsnet_r04](img/parrot_rescsnet_r04.jpg)  | ![parrot_rescsnet_r01](img/parrot_rescsnet_r01.jpg)  
 ![barbara](img/barbara.jpg) | ![barbara_rescsnet_r10](img/barbara_rescsnet_r10.jpg)| ![barbara_rescsnet_r04](img/barbara_rescsnet_r04.jpg)| ![barbara_rescsnet_r01](img/barbara_rescsnet_r01.jpg)
 
+# Ways to improve this work?
+* Allow the input image to be of arbitary size as [this issue](https://github.com/y0umu/ResCSNet/issues/1) points out.
+* Improve the loss function. Currently the DW-SSIM loss is interpreted as something multiplied by the absolute value of a cosine similarity loss. It's weired to some extent if you derive the absolute value of a cosine similarity loss. We did that to limit the range of the loss to 0-1, but is this really necessary?
+* Try to remove Batchnorm layers? Although they seem to accelerate training, I read in some papers about image superesolution that Batchnorms might introduce undesired artifacts.
+
 # Citation
-I am still working on the research article. I would be glad to hear that this repo can help you even without the paper.
+```
+@article{Zhang2019Image,
+    author = {Zhang, Fan and Xu, Zhichao and Chen, Wei and Zhang, Zizhe and Zhong, Hao and Luan, Jiaxing and Li, Chuang},
+    title = {An Image Compression Method for Video Surveillance System in Underground Mines Based on Residual Networks and Discrete Wavelet Transform},
+    abstact = {Video surveillance systems play an important role in underground mines. Providing clear surveillance images is the fundamental basis for safe mining and disaster alarming. It is of significance to investigate image compression methods since the underground wireless channels only allow low transmission bandwidth. In this paper, we propose a new image compression method based on residual networks and discrete wavelet transform (DWT) to solve the image compression problem. The residual networks are used to compose the codec network. Further, we propose a novel loss function named discrete wavelet similarity (DW-SSIM) loss to train the network. Because the information of edges in the image is exposed through DWT coefficients, the proposed network can learn to preserve the edges better. Experiments show that the proposed method has an edge over the methods being compared in regards to the peak signal-to-noise ratio (PSNR) and structural similarity (SSIM), particularly at low compression ratios. Tests on noise-contaminated images also demonstrate the noise robustness of the proposed method. Our main contribution is that the proposed method is able to compress images at relatively low compression ratios while still preserving sharp edges, which suits the harsh wireless communication environment in underground mines.},
+    journal = {Electronics},
+    issn = {2079-9292},
+    keywords = {underground mines; intelligent surveillance; residual networks; compressed sensing; image compression; image restoration; discrete wavelet transform},
+    number = {12},
+    volume = {8},
+    article-number = {1559},
+    year = {2019},
+    doi = {10.3390/electronics8121559},
+    url = {https://www.mdpi.com/2079-9292/8/12/1559},
+}
+```
